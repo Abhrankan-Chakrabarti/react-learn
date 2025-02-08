@@ -231,13 +231,22 @@
 // }
 
 // code-13 ( Event Propagationm)
-import {NetflixSeries} from "./Components/NetflixSeries"
+// import {NetflixSeries} from "./Components/NetflixSeries"
+// export const App=()=>{
+//   return(
+//     <>
+//       <NetflixSeries/>
+//     </>
+//   )
+// }
+
+//code -14 (shortcircuit evaluation)
+import { ShortCircuit } from "./Components/ShortCircuit.jsx"
 export const App=()=>{
   return(
     <>
-      <NetflixSeries/>
+      <ShortCircuit />
     </>
-  )
+  );
 }
-
 

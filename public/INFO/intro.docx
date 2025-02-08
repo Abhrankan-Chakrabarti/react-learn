@@ -282,3 +282,29 @@ You can either return a JSX early or you can use ternary operators for condition
     e.g : import { IoIosHappy } from "react-icons/io";
         <IoIosHappy />  use any where.
 
+----------------------------------------------------------------
+20.     ShortCircuit Evaluation
+----------------------------------------------------------------
+    Rules : Short circuit evaluation involves logical operations(&&,||,??) and how they evaluate expressions based on the truthiness of their operands.
+    
+    1. Logic OR (||) 
+        syntax : expression1 || expression2
+        rule : if expression1 is truthy,return expression1, otherwise, return expression2
+
+        const result = false || "hello" ;     // hello
+        const  result1 = true || "world" ;     // true
+    
+    2. Logic AND (&&) 
+        syntax : expression1 && expression2
+        rule : if expression1 is falsy,return expression1, otherwise, return expression2
+
+        const result = false && "hello" ;     // false
+        const result1 = true && "world" ;     // world
+
+    3. Nullish Coalescing (??) 
+        syntax : expression1 ?? expression2
+        rule : if expression1 is not null or undefined ,return expression1, otherwise, return expression2
+
+        const result = null ?? "hello" ;     // hello
+        const result1 = undefined ?? "world" ;  // world
+        const result2 = "" ?? "fallback" ;     //  " "  
