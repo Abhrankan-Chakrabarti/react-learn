@@ -1,0 +1,284 @@
+#   Install REACT :
+    0. first create a folder , where you put react files.
+    1. install bun globally : npm i -g bun
+    2. create  react project : bun create vite
+    3. select framework : react
+    4. select a variant : JavaScripte
+        Done. Now run:
+            cd project_todolist
+            bun install
+            bun run dev
+
+
+---------------------------
+    1. Project Structure 
+--------------------------
+
+# Node_model :
+    This is the folder which contains all the necessary libraries & dependencies by Reaact.js
+
+# Public :
+    This folder contains all statics files like images,videos,fonts..etc
+
+# src :
+    This folder contains all source files(react component,js files,css and html files)
+
+    *App.jsx : the main react component 
+    *main.jsx : This is the entry point to our React.js project
+
+# gitignore : 
+    hide files and code from git
+
+# index.html :
+    The main HTML file where your React application is loaded,serving as the entry point for the web browser.
+
+# package.json :
+    This file contains all the details or configuration regarding this project.
+
+# vite.config.js :
+    This file contains config related to vite
+
+-------------------------------------------------
+        2. Naming Convertion
+-------------------------------------------------
+
+ # camelCase => bikramPal, .....B....
+ #PascalCase =>BikramPal , B.....B...
+ #snake_case => bikram_pal , ....._.....
+ #kebab-case => bikram-pal , ......-.....
+
+===================================================================
+1. JSX :
+    jsx stands for JavaScript XML. It allows you to write HTML elements in JavaScript and
+    place them in the DOM without any createElement() and appendChild() methods.
+
+2. TODO :
+    Each JSX expression must have one parent element,which means if you try to return multiple elements,
+    react will throw an error, e.g in a perticular function only return one element like h1, h2, or other
+    but you create a div then u add multiple element in div.
+    Every JSX tag needs to be closed. You can use self-closing tags for element that don't have
+    children, e.g <img src="url" /> .
+
+--------------------------------------------------------
+    3. Components
+--------------------------------------------------------
+    In react , a component is essentially a javascript function or class that returns JSX(JavaScript XML),a 
+    syntax extension that allows to write HTML-like code inside JavaScript. Components are the building 
+    blocks of any React application , allowing for the creation of complex and interactive user interface
+    through the assembly of isolated,reusable pieces.
+    React.js components recommended to use .jsx
+    component write by PascalCase naming.
+
+    There are two ways to create component in React.js
+    1.class Based Components
+    2.Functional Components
+
+# Class Based Components
+
+    import React,{ Component } from "react";
+    export class Welcome extends Component {
+        render(){
+            return <h1>Hello, {this.props.name}</h1>;
+        }
+    }
+
+--------------------------------------------------------
+4.  React Fragments
+--------------------------------------------------------
+in React.js , a component can't return multiple elements without a wrapper div.
+you can do this to imitate : 
+    1.Using an Array of elements with Keys
+        e.g1=> return[<p> RAM </p>,<strong> 80 </strong>];
+        e.g2=>return([<component_name key="1" /> , <component_name key="2" />])
+    But it's tedious, to fix this React 16 introduced Fragments, which
+    allow components to return multiple elements without adding extra nodes
+    to the DOM.
+
+    2.import {Fragment } from "react";
+    return (
+        <Fragment>
+            elements
+            elements
+        </Fragment>
+    );
+
+    3.Alternatively, you can also use its shorthand syntax:
+    return(
+        <>
+            elements
+        </>
+    );
+
+-----------------------------------------------------------
+5.  Dynamic Value is JSX
+----------------------------------------------------------
+You can add any variable of your component is JXS usinf {} syntax.
+    function MyComponent(){
+        const value="Hello";
+        return <p> {value} </p> ;
+    }
+
+    JSX allows you to write JavaScript expressions inside curly bracets
+    includes operations, function calls and other JavaScript expressions
+    produce a value.
+
+    return <div> The result is:{1+2+3}</div> ;
+
+----------------------------------------------------------
+7. Conditionals Values
+-----------------------------------------------------------
+
+You can either return a JSX early or you can use ternary operators for conditionals in JSX.
+    retuurn <P> { age>=18 ? "adult" : "minor" } </p> ;
+    retuurn <P> { age>=18 &&  "you can vote" } </p> ;
+    retuurn <P> { username ||"Guest" } </p> ;
+
+------------------------------------------------------------
+8. Import and Export file
+------------------------------------------------------------
+
+    Default Export : A file can have only one default Export
+    Default import : When importing a default export, you can name the import whatwvwr you like.
+
+    Name Export : A file can have multiple name exports.
+    each named export must be explicitly exported.
+
+    Name Import : When a import named exports, the import names must match the export names exactly.
+    named import must be enclosed in curly braces;
+
+------------------------------------------------------------
+9.   Looping in JSX
+------------------------------------------------------------
+    we don't have for loops in JSX , so we have to use .map() method of arrays.
+
+    return(
+        <ul>
+            {students.map(()=>(   ****use 1st braces
+                <li key={student}> {student} </li>
+            ))}
+        </ul>
+    );
+
+    React will complain  if you don't pass key prop to <li>
+
+-------------------------------------------------------------
+10.   props
+-------------------------------------------------------------
+    React props(properties) facilitate data transfer from parent to child components.
+    Data flows unidirectionally,ensuring a clear direction of information in react application.
+    props are immutable, meaning child components cannot modify the data received from parents.
+    child components access props through their function parameters.
+    you can also pass JSX as props to another component.
+
+-------------------------------------------------------------
+11.   Adding CSS files
+------------------------------------------------------------
+    This file contains global CSS styles that apply to the entire application.
+    It allows you to define style that should be applied globally, affecting 
+    all componenets within the app.
+
+-------------------------------------------------------------
+11.   Adding .module.css files
+-------------------------------------------------------------
+
+    Every time you import a css file in your react component , they are regarded as global css.
+    The class names in css modules are often automatically generally reducing the likehood of naming classes.
+    Name your css module files with the .module.css or .module.scss extension.
+    Import the css module file in your react component. Access class name as properties of the imported style object.
+    Commbine multiple class names using templete literals or the class library.
+    Dynamically apply class names based on component state of peops.
+
+    When using css modules , class names with hyphens can sometimes cause issues if not accessed correctly.In css modules,you
+    need to use bracket notation for class names with hyphens.
+    e.g <div className={style["card-content"]}>
+
+--------------------------------------------------------------
+12.     styled-Components                                                
+--------------------------------------------------------------
+    install styled-component by terminal - bun/npm i styled-components
+    
+    const Button=styled.button `  color:grey; ` ;
+    const Button=styled.button({ color : "grey ,});    //object
+
+---------------------------------------------------------------
+13.     tailwind CSS
+---------------------------------------------------------------
+    install tailwind CSS go to google and search
+    tailwind css is  a inline css
+    e.g <p className="text-3xl font-bold underline"> summary </p>
+
+    tailwind CSS is a utility-first CSS framework for building custom user interfaces.
+    It provides a set of pre-defined classes that can be used to style HTML elements, making it easier
+    to create consistent and responsive designs.
+
+----------------------------------------------------------------
+14. Events Handling
+----------------------------------------------------------------
+    Event handling in React is the process and responding to user interactions, such as clicks, 
+    keystrockes or form submissions, within a React application. Event handling in react follows a similar pattern
+    to standard JavaScript event  handling but with some key differences, such as using synthetic events for cross-browser 
+    compatibility and providing consistent event handling across different element and browsers.
+
+    SyntheticBaseEvent : When you handle events in react , like clicking a buttopn or typing in an input box reac wrapper the
+    native browser events in something called a SyntheticEvent.
+
+    Events : onClick, onChange, onSubmit, onMouseEnter, onMouseLeave, onKeyDown, onKeyUp, onFocus, onBlur,onImput .
+
+--------------------------------------------------------------
+15.  Event Propagation
+--------------------------------------------------------------
+    Event propagation is the process by which an event is passed from one element to another in the DOM
+    same of JavaScript advance  Event propagation
+
+--------------------------------------------------------------
+16.     States in React HOOKS
+--------------------------------------------------------------
+    In react , state refers to an object that holds data or information about the component.State is managed 
+    within the component(just like variables declared in a function). However unlike regular variables,when state 
+    is changes, React re-renders the component to reflect these changes, keeping the user interface in sync with the data.
+
+    State is dynamic and mutable, meaning it can change over time useally in response to user actions, server responses,
+    or other evenets.
+
+    Change the value in particular element
+    create : const [count,setCount]=useState(0);
+    here, count = 0 from useState(0);
+    function name(){
+        setCount(count+1);        - role 1
+        setCount(()=> count+1 );  -role 2  don't use {} of setCount ***
+    }
+
+    note : if you do any change of a parent node (box), then you see all child note will be change (div).
+           like :   <div className="box">
+                       <child1 />
+                       <child1 />
+                       <child1 />
+                    </div>
+            but you change any child, then don't effect on any other sibling(childe).
+
+---------------------------------------------------------------
+17.     Derived State in React
+---------------------------------------------------------------
+
+    Derived state is any state that can be computed based on other state or props. It is not 
+    stored directly in the component's state but is calculaed when needed.This approch helps 
+    avoid duplication and keeps the state simpler and more manageable.
+
+    e.g const userCount= users.length;
+    
+---------------------------------------------------------------
+18.     Lift State Up in React
+---------------------------------------------------------------
+    Lifting State Up is a pettern in react where you move the state from child components to a common parent component
+    so that multiple child components can share and synchronize this state.This ensure that the state is managed at a higher 
+    level in the component hierarchy, allowing data to flow down as props and actions (such as events) to flow up.
+    
+---------------------------------------------------------------
+19.     React Use Icons
+---------------------------------------------------------------
+    Installation : go to react icons , copy install code(bun i react-icons).
+    search react icons and copy code from google react icons
+    
+    e.g : import { IoIosHappy } from "react-icons/io";
+        <IoIosHappy />  use any where.
+

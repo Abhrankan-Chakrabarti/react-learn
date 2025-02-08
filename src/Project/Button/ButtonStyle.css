@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    font: 500;
+}
+.buttonMain{
+    background-color:gray;
+    width: auto;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonMain__container{
+    background-color: #f0f0f0;
+    padding: 20px 25px ;
+    width: 500px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    border-radius: 20%/50%;
+    box-shadow: rgb(0, 0, 0) 0px 20px 30px 0px;
+}
+.buttonMain__button{
+    background-color:tomato;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+span{
+    font-size: 3.8rem;
+    font-weight: bolder;
+}
+.on{
+    background-color:chartreuse;
+    transform: translateX(300px);
+    transition-duration: 1s;
+    box-shadow: rgb(0, 0, 0) 0px 0px 30px 0px;
+    
+}
+.off{
+    background-color:tomato;
+    transform: translateX(0);
+    transition-duration: 1s;
+    box-shadow: rgb(28, 28, 8) 0px 0px 30px 0px;
+    color: #ffffff;
+}
+.bgOn{
+    background-color:rgb(162, 227, 255);
+    color: rgb(0, 0, 0);
+}

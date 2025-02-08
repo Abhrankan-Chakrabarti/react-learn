@@ -1,0 +1,47 @@
+*{
+    padding:0;
+    margin:0;
+    border:0;
+}
+.event-content{
+    padding: 20px;
+    height: 700px;
+    width: auto;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grand-box{
+    position: relative;
+    padding: 20px;
+    height: 300px;
+    width: 500px;
+    background-color:coral;
+    border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent-box{
+    position: relative;
+    padding: 20px;
+    height: 150px;
+    width: 310px;
+    background-color:violet;
+    border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(226, 255, 3, 0.5) 6px 6px 40px 20px,
+    rgba(0, 0, 0, 0.8) 0px 0px 0px 1px;
+}
+.child-box{
+    position: relative;
+    padding: 20px;
+    height: 90px;
+    width: 190px;
+    background-color:chartreuse;
+    border: 5px solid black
+    
+}

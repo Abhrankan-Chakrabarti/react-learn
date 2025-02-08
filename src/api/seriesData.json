@@ -1,0 +1,74 @@
+[
+    {
+        "name" : " Lovely Krishna",
+        "id" :"lovely-runner-1",
+        "rating": "10.0",
+        "cast":["Gopal "," Krishna "," kanha"],
+        "watch_url":"https://www.youtube.com/watch?v=MV6R7wOIFDw&list=PPSV",
+        "genre":["GOD","Angle"],
+        "img_url":"./img2.jpg"
+    },
+    {
+        "name" : "Lovely Bikram",
+        "id" :"lovely-runner-2",
+        "rating": "9.0",
+        "cast":["Bikram"," Biku"," Vetal"],
+        "watch_url":"https://www.youtube.com/watch?v=MV6R7wOIFDw&list=PPSV",
+        "genre":["Human"],
+        "img_url":"./img3.jpg"
+    },
+    {
+        "name" : "Lovely2",
+        "id" :"lovely-runner-3",
+        "rating": "7.1",
+        "cast":["Winona Ryder","David Harbour","Millie Bobby Brown"],
+        "watch_url":"https://www.youtube.com/watch?v=MV6R7wOIFDw&list=PPSV",
+        "genre":["drama","Fantasy","horror"],
+        "img_url":"./img1.jpg"
+    },
+    {
+        "name" : "Lovely3",
+        "id" :"lovely-runner-4",
+        "rating": "5.9",
+        "cast":["Winona Ryder","David Harbour","Millie Bobby Brown"],
+        "watch_url":"https://www.youtube.com/watch?v=MV6R7wOIFDw&list=PPSV",
+        "genre":["drama","Fantasy","horror"],
+        "img_url":"./img.jpg"
+    },
+    {
+        "name" : "Lovely Krishna 2",
+        "id" :"lovely-runner-5",
+        "rating": "10.0",
+        "cast":["Gopal "," Krishna "," kanha"],
+        "watch_url":"https://www.youtube.com/watch?v=MV6R7wOIFDw&list=PPSV",
+        "genre":["GOD","Angle"],
+        "img_url":"./img2.jpg"
+    },
+    {
+        "name" : "Lovely Bikram 2",
+        "id" :"lovely-runner-6",
+        "rating": "9.0",
+        "cast":["Bikram"," Biku"," Vetal"],
+        "watch_url":"https://www.youtube.com/watch?v=MV6R7wOIFDw&list=PPSV",
+        "genre":["Human"],
+        "img_url":"./img3.jpg"
+    },
+    {
+        "name" : "Lovely 2 2",
+        "id" :"lovely-runner-7",
+        "rating": "7.1",
+        "cast":["Winona Ryder","David Harbour","Millie Bobby Brown"],
+        "watch_url":"https://www.youtube.com/watch?v=MV6R7wOIFDw&list=PPSV",
+        "genre":["drama","Fantasy","horror"],
+        "img_url":"./img1.jpg"
+    },
+    {
+        "name" : "Lovely 3 2",
+        "id" :"lovely-runner-8",
+        "rating": "5.9",
+        "cast":["Winona Ryder","David Harbour","Millie Bobby Brown"],
+        "watch_url":"https://www.youtube.com/watch?v=MV6R7wOIFDw&list=PPSV",
+        "genre":["drama","Fantasy","horror"],
+        "img_url":"./img.jpg"
+    }
+]

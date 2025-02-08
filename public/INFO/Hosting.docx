@@ -1,0 +1,12 @@
+=============================================================================
+|                                HOSTING PROJECT                            |
+=============================================================================
+ 
+ 1. TODO Hostimg : 
+    1. Go to netlify web site 
+    2. create your account 
+    3. VS code open terminal : bun run build 
+      automatically build a "dist" folder
+    4. go netlify add new site => add dist folder
+    5. site configaration => change site name
+    
