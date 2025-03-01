@@ -308,3 +308,12 @@ You can either return a JSX early or you can use ternary operators for condition
         const result = null ?? "hello" ;     // hello
         const result1 = undefined ?? "world" ;  // world
         const result2 = "" ?? "fallback" ;     //  " "  
+----------------------------------------------------------------
+21.         Hooks Rule
+----------------------------------------------------------------
+    1. hooks let you use different react features from your components.
+    2. it starts with use_____. (useState,useReduce,useEffects)
+    3. hooks can only be use at the top level of your component.
+    4.do you call hooks inside loops, conditions, or nested functions.
+    5.you can create your own hooks by creating function starting usr_____
+    6.ensure hooks are called in the same order.
